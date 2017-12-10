@@ -4,9 +4,9 @@ title: Splatnet2statink.py runs as Daemon
 ---
 
 # AT YOUR OWN RISK
-Nobody never use who don't understand how splatnet2statink.py works.
+Nobody never use who don't understand how [splatnet2statink.py](https://github.com/frozenpandaman/splatnet2statink) works.
 
-# Splatnet2statink.py runs as Daemon with Systemd
+# `Splatnet2statink.py` runs as Daemon with Systemd
 Systemd is a popular manager of Daemon in recent Linux dists.
 It requires a service configuration files and some script.
 
@@ -64,8 +64,8 @@ sudo chown user:group {start,stop}.sh
 sudo chmod +x {start,stop}.sh
 
 start.sh runs a background process and records its pid in PID_FILE.
-Arrange COMMAND var to set splatnet2statink.py parameters you want (keep -M parameter small).
-Now this script requires `chmod +x` to splatnet2statink.py.
+Arrange COMMAND var to set `splatnet2statink.py` parameters you want (keep -M parameter small).
+Now this script requires `chmod +x` to `splatnet2statink.py`.
 
 ```sh:start.sh
 #!/bin/bash
@@ -142,12 +142,12 @@ sudo systemctl stop splatnet2statink
 sudo systemctl restart splatnet2statink
 ```
 
-# Make alive monitor of splatnet2statink.py
-I wanna know when splatnet2statink.py dies.
-I run another daemon to watch splatnet2statink.py alive.
+# Make alive monitor of `splatnet2statink.py`
+I wanna know when `splatnet2statink.py` dies.
+I run another daemon to watch `splatnet2statink.py` alive.
 
-NOTE: *Systemd may have Restart option in a servece configuration file.
-I wanna alert *
+*NOTE: Systemd may have Restart option in a servece configuration file.
+I wanna alert*
 
 It check a process name and If it could find out then it sleeps.
 If the process dies, it tries to restart.
@@ -236,7 +236,8 @@ WantedBy=multi-user.target
 start.sh / stop.sh are the same as splatnet2statink.service.
 
 # References
-
+* [splatnet2statink.py](https://github.com/frozenpandaman/splatnet2statink)
+* [splatnet2statink.py でスプラトゥーン2の試合結果を stat.ink へ自動送信しようの巻](https://archive.fo/td52p)
 * [Systemdを使ってさくっと自作コマンドをサービス化してみる](https://qiita.com/DQNEO/items/0b5d0bc5d3cf407cb7ff)
 * [Systemd入門(4) - serviceタイプUnitの設定ファイル](http://enakai00.hatenablog.com/entry/20130917/1379374797)
 * [systemd を利用してプロセスをデーモン化する](http://cameong.hatenablog.com/entry/2016/10/18/121400)
