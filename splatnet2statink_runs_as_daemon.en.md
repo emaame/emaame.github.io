@@ -44,6 +44,7 @@ Edit /etc/default/splatnet2statink (this place is defined above).
 And make dirs they are defined.
 
 ```
+RUN_DIR=/path/to/splatnet2statink
 LOCK_FILE=/var/lib/splatnet2statink/splatnet2statink.lock
 
 LOG=/var/log/splatnet2statink/statink.log
@@ -56,7 +57,7 @@ If you need more ENV vars, you can define more ENV vars.
 
 *NOTE: I use 2 accounts, so I define 2 values for logs and pids.*
 
-### Write Start/stop scripts
+### Write Start/Stop scripts
 Edit /path/to/script/{start,stop}.sh (this place is also defined above),
 And run `chown` and `chmod +x` appropriately.
 
@@ -71,6 +72,7 @@ Now this script requires `chmod +x` to `splatnet2statink.py`.
 #!/bin/bash
 COMMAND="./splatnet2statink.py -M 1800 -r"
 
+cd ${RUN_DIR}
 ${COMMAND} > ${LOG} 2>${ERROR_LOG} &
 echo $! > ${PID_FILE}
 ```
