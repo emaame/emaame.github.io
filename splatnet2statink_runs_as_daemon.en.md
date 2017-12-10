@@ -6,6 +6,12 @@ title: Splatnet2statink.py runs as Daemon
 # AT YOUR OWN RISK
 Nobody never use who don't understand how [splatnet2statink.py](https://github.com/frozenpandaman/splatnet2statink) works.
 
+# What I Want
+* `splatnet2statink.py` runs 24/7 in a VPS automatically.
+* Alert by e-mail when it dies
+
+`-M` make it as monitor mode, but it is necessary to restart in hand when a server reboot or it dies.
+
 # `Splatnet2statink.py` runs as Daemon with Systemd
 Systemd is a popular manager of Daemon in recent Linux dists.
 It requires a service configuration files and some script.
@@ -103,7 +109,8 @@ splatnet2statink.service                      enabled
 ```
 
 ### Manage the service
-Enable
+Enable it,
+now you can get an automatic start of a daemon when a server rebooted.
 
 ```
 sudo systemctl enable splatnet2statink
@@ -235,7 +242,9 @@ Restart = no
 WantedBy=multi-user.target
 ```
 
-start.sh / stop.sh are the same as splatnet2statink.service.
+start.sh / stop.sh and others are the same as splatnet2statink.service.
+Enable it and start it.
+
 
 # References
 * [splatnet2statink.py](https://github.com/frozenpandaman/splatnet2statink)
