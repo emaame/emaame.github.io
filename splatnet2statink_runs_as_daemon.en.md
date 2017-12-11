@@ -71,8 +71,9 @@ sudo chown user:group {start,stop}.sh
 sudo chmod +x {start,stop}.sh
 
 start.sh runs a background process and records its pid in PID_FILE.
-Arrange COMMAND var to set `splatnet2statink.py` parameters you want (keep -M parameter small).
-Now this script requires `chmod +x` to `splatnet2statink.py`.
+Arrange COMMAND var to set `splatnet2statink.py` parameters you want.
+**Keep -M parameter enough LARGE. 50 matches spend about 50 mins at least.** 
+This script expect `chmod +x` to `splatnet2statink.py`.
 
 ```sh:start.sh
 #!/bin/bash
@@ -163,7 +164,7 @@ If the process dies, it tries to restart.
 The restart failed it alerts by email!
 
 
-NOTE: *Update / Maintenance could be cause of failure.
+*NOTE: Update / Maintenance could be cause of failure.
 After a maintenance it restart automatically.*
 
 This script use mail command.
