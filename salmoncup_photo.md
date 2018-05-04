@@ -6,10 +6,10 @@ title: 写真部門コピペ用文章
 pre { white-space: pre-wrap; }
 
 @media (max-width: 360px) {
-    pre { font-size: 16px; }
+    pre { font-size: 20px; }
 }
 @media (min-width: 361px) {
-    pre { font-size: 20px; }
+    pre { font-size: 24px; }
 }
 </style>
 
