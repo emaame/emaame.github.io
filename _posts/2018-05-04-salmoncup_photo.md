@@ -5,6 +5,8 @@ title: 写真部門コピペ用文章
 <style>
 pre {
   white-space: pre-wrap;
+  border: 1px solid #ccc;
+  background: #eee;
 }
 @media (max-width: 360) {
   pre {
