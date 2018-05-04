@@ -3,7 +3,13 @@ layout: post
 title: 写真部門コピペ用文章
 ---
 <style>
-pre { white-space: pre-wrap; }
+pre {
+    white-space: pre-wrap;
+    word-break: break-all;
+
+    border: 1px solid #ccc;
+    background: #eee;
+}
 
 p, pre { width: 95%; }
 
@@ -17,6 +23,7 @@ p, pre { width: 95%; }
 
 # 写真部門
 必ず下記文章をコピペして、
+
 タイトルを記載してから写真投稿ツイートをして下さい。 
 
 シャケ杯参加には
