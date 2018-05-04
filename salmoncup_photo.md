@@ -5,13 +5,13 @@ title: 写真部門コピペ用文章
 <style>
 pre { white-space: pre-wrap; }
 
-p { width: 90%; }
+p, pre { width: 95%; }
 
 @media (max-width: 360px) {
-    pre { font-size: 20px; }
+    pre { font-size: 26px; }
 }
 @media (min-width: 361px) {
-    pre { font-size: 24px; }
+    pre { font-size: 30px; }
 }
 </style>
 
