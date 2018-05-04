@@ -2,6 +2,7 @@
 layout: post
 title: 写真部門コピペ用文章
 ---
+@import "{{ site.theme }}";
 
 # 写真部門
 写真部門 必ず下記文章をコピペして、
