@@ -2,7 +2,16 @@
 layout: post
 title: 写真部門コピペ用文章
 ---
-@import "{{ site.theme }}";
+<style>
+pre { white-space: pre-wrap; }
+
+@media (max-width: 360px) {
+    pre { font-size: 16px; }
+}
+@media (min-width: 361px) {
+    pre { font-size: 20px; }
+}
+</style>
 
 # 写真部門
 写真部門 必ず下記文章をコピペして、
